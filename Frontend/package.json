@@ -1,0 +1,12 @@
+{
+  "name": "cms-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd cms && npm run dev",
+    "build": "cd cms && npm run build",
+    "lint": "cd cms && npm run lint",
+    "preview": "cd cms && npm run preview",
+    "install": "cd cms && npm install"
+  }
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Render build script for Django backend
+
+set -o errexit  # Exit on any error
+
+pip install -r requirements.txt
+
+python manage.py collectstatic --no-input
+python manage.py migrate
