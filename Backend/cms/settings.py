@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'cms.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASE_URL = config('DATABASE_URL', default=None)
+DATABASE_URL = config('DATABASE_URL', default='').strip()
 
-if DATABASE_URL:
+if DATABASE_URL and DATABASE_URL.startswith('postgresql'):
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
     }
