@@ -93,7 +93,7 @@ Create a `.env` file inside the `Backend/` directory:
 SECRET_KEY=your-secret-key-here
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
-DATABASE_URL=                   # Leave empty to use SQLite locally
+DATABASE_URL=                   
 CORS_ALLOWED_ORIGINS=http://localhost:5173
 ```
 
@@ -101,7 +101,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:5173
 # Run migrations and start the server
 cd Backend
 python manage.py migrate
-python manage.py createsuperuser   # optional
+python manage.py createsuperuser   
 python manage.py runserver
 ```
 
