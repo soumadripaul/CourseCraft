@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'cms.wsgi.application'
 
 DATABASE_URL = config('DATABASE_URL', default='').strip()
 
-if DATABASE_URL and DATABASE_URL.startswith('postgresql'):
+if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
     }
